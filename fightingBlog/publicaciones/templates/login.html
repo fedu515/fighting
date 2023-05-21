@@ -26,19 +26,19 @@
           <div class="parallax-container breadcrumb-modern bg-gray-darkest" data-parallax-img="images/background-04-1920x750.jpg">
             <div class="parallax-content"> 
               <div class="rd-navbar-brand">
-                <a href="index.html"><img width='100' height='auto'  src="{% static 'publicaciones/images/favicon.jpg' %}" alt=''/></a>            
+                <a href="index.html"><img width='250' height='auto'  src="{% static 'publicaciones/images/logo.png' %}" alt=''/></a>            
            </div>
               <div class="container section-top-98 section-bottom-34 section-lg-bottom-66 section-lg-98 section-xl-top-110 section-xl-bottom-41">
                 
-                <form>
+                <form method="POST">{% csrf_token %}
                   <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label"></label>
-                    <input type="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Usuario">
+                    <input type="username" class="form-control" id="exampleInputEmail1"  placeholder="Usuario" name="username">
                     <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónico.</div>
                   </div>
                   <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label"></label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña" name="password">
                   </div>
                   <button type="submit" class="btn btn-primary">Ingresar</button>
                 </form>
