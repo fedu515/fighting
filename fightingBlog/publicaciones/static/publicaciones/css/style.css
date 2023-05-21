@@ -1586,6 +1586,9 @@ pre code {
 	}
 }
 
+.fondo{
+	background-color: #000000;
+}
 .table {
 	width: 100%;
 	max-width: 100%;

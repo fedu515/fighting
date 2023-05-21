@@ -17,8 +17,9 @@ from django.contrib import admin
 from django.urls import path
 from . import views
 #importo para el login
-from django.contrib.auth import views as autenticacion
+from django.contrib.auth import views as autenticacion 
 app_name= 'publicaciones'
+
 urlpatterns = [
     path('home', views.home, name='home'),
     path('admin/', admin.site.urls),
