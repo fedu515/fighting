@@ -27,6 +27,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+#CONFIGURACION DE LOGIN
+LOGIN_URL: 'publicaciones/login'
+
+LOGIN_REDIRECT_URL= '../home'
+
 
 # Application definition
 

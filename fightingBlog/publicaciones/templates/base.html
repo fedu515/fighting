@@ -23,17 +23,27 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a href="http://www.fighting.com.ar"><img src="{% static 'images/logo.png' %}" alt="logo"> Fighting</a>
+                <a href="http://www.fighting.com.ar"><img width='50' src="{% static 'publicaciones/images/favicon.jpg' %}" alt=""></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link"  href="#">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Nuevo Profesor</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item">                               
                 <a class="nav-link" href="#">Cargar Contenido</a>
-              </li>              
+              </li>      
+              
+              {% if user.is_authenticated %}
+                <li class="nav-item">
+                  <a class="nav-link"  href="#">Logout</a>
+                </li>
+                <li class="nav-item">                               
+                  <p class="nav-link">{{user.username}}</p>
+                </li> 
+              {% endif %}
+                        
             </ul>
           </div>
         </div>
@@ -43,13 +53,7 @@
         
       {% endblock contenido %}
 
-      <footer class="section-relative section-top-66 section-bottom-34 page-footer bg-gray-base context-dark novi-background" data-preset='{"title":"Footer","category":"footer","reload":true,"id":"footer"}'>
-        <div class="container">
-                  <p class="pie">Jessica Quiroga - Personal Trainer &copy; <span id="copyright-year"></span> .
-                    Design&nbsp;by&nbsp;<a href="">Bug`s DS</a>
-                  </p>
-        </div>
-      </footer>
+      
         
   <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
